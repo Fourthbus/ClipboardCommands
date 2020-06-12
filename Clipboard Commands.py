@@ -11,7 +11,7 @@ def copy(data):
 def clean_paste(data):
 	# clean word
 	data = str(data)
-	data = data.replace(u'”', '"').replace(u'“', '"').replace(u'’', "'")
+	data = data.replace(u'”', "''").replace(u'“', "``").replace(u'’', "'").replace(u'‘', "`")
 	data = data.replace('%', '\\%')
 	data = data.replace('________________________________________', '\n')
 	# clean htmlentities
